@@ -110,9 +110,8 @@ jobs:
         cd build
         make
     displayName: 'Compiling'
-
-  - task: DownloadPipelineArtifact@2
+    
+  - task: PublishPipelineArtifact@1
     inputs:
-      artifact: 'WebApp'
-      path: $(System.DefaultWorkingDirectory)/build/
-
+        targetPath: $(System.DefaultWorkingDirectory)/build/
+        artifactName: WebApp
