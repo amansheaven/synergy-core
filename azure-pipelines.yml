@@ -114,5 +114,5 @@ jobs:
   - task: DownloadPipelineArtifact@2
     inputs:
       artifact: 'WebApp'
-      path: $(Build.SourcesDirectory)/build/
+      path: $(System.DefaultWorkingDirectory)/build/
 
